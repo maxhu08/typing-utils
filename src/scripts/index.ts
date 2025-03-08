@@ -1,16 +1,17 @@
 import { smartMap } from "./utils/smart-map";
 
-const textInput = document.getElementById("text-input") as HTMLInputElement;
-const resultsText = document.getElementById("results-text") as HTMLDivElement;
+const textInputEl = document.getElementById("text-input") as HTMLInputElement;
+const resultsContainerEl = document.getElementById("results-container") as HTMLDivElement;
 
-textInput.addEventListener("input", () => {
-  const chars = textInput.value.split("");
+textInputEl.addEventListener("input", () => {
+  resultsContainerEl.innerHTML = "";
 
-  const result = chars
-    .map((char) => {
-      return smartMap.get(char);
-    })
-    .join(" ");
+  const chars = textInputEl.value.split("");
 
-  resultsText.innerHTML = result;
+  chars.forEach((char) => {
+    resultsContainerEl.innerHTML += `<div class="grid place-items-center grid-rows-[repeat(2,max-content)] bg-neutral-800 aspect-square p-2 rounded-md">
+      <span class="text-white text-4xl">${char}</span>
+      <span class="text-white">${smartMap.get(char)}</span>
+    </div>`;
+  });
 });

@@ -1,21 +1,24 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles/tailwind.css" />
+    <script src="scripts/index.ts" type="module" defer></script>
+    <title>Hello World!</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="styles/tailwind.css" />
-  <script src="scripts/index.ts" type="module" defer></script>
-  <title>Hello World!</title>
-</head>
-
-<body class="min-h-screen bg-neutral-900">
-  <div class="grid h-screen place-items-center">
-    <div class="grid place-items-center gap-4">
-      <input id="text-input" class="p-2 text-center bg-neutral-800 text-neutral-100" autocomplete="off" />
-      <p id="results-text" class="text-white font-semibold text-4xl">waiting for input...</p>
+  <body class="min-h-screen bg-neutral-900">
+    <div class="grid h-screen place-items-center">
+      <div class="grid w-full place-items-center gap-4">
+        <input
+          id="text-input"
+          class="rounded-md border-2 border-transparent bg-neutral-800 p-2 text-center text-base text-white placeholder-neutral-500 outline-none transition duration-[250ms] focus-within:border-blue-500"
+          placeholder="enter word..."
+          autocomplete="off"
+        />
+        <p id="results-container" class="grid grid-flow-col gap-4"><span class="text-white"> waiting for input... </span></p>
+      </div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>
