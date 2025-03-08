@@ -1,16 +1,21 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="styles/tailwind.css" />
-    <script src="scripts/index.ts" type="module" defer></script>
-    <title>Hello World!</title>
-  </head>
 
-  <body class="min-h-screen bg-neutral-900">
-    <div class="grid h-screen place-items-center">
-      <h1 class="text-4xl font-semibold text-white">Hello World!</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="styles/tailwind.css" />
+  <script src="scripts/index.ts" type="module" defer></script>
+  <title>Hello World!</title>
+</head>
+
+<body class="min-h-screen bg-neutral-900">
+  <div class="grid h-screen place-items-center">
+    <div class="grid place-items-center gap-4">
+      <input id="text-input" class="p-2 text-center bg-neutral-800 text-neutral-100" />
+      <p id="results-text" class="text-white font-semibold text-4xl">waiting for input...</p>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
